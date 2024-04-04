@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vue Test Examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/static/js/vue.global.prod.js"></script> <!-- Vue needs to be loaded before any components or elements -->
+    <script src="/static/js/tags.min.js"></script>
+    <!-- <script src="/static/js/test-element.js"></script> elements need to be loaded before the body -->
+    <!-- <script src="/static/js/button-counter.js"></script> elements need to be loaded before the body -->
+    <!-- <script src="/static/js/ajax-counter.js"></script> elements need to be loaded before the body -->
+</head>
+<body>
+    <h1>Vue Test Examples</h1>
+    <div>Test Element: <test-element></test-element></div> <!-- custom elements can exist outside of the "app" -->
+    <div>Button Counter: <button-counter clicks-label="Clickers"></button-counter></div> <!-- custom elements can exist outside of the "app" -->
+    <h2>In App</h2>
+    <div id="app">
+        <div>Test Component: <test-component :prop="someData"></test-component></div> <!-- components need to be loaded inside the "app" -->
+        <div>Test Element: <test-element></test-element></div>
+        <div>Button Counter Again: <button-counter clicks-label="Clickedoos"></button-counter></div>
+    </div>
+    <h3>Out of App</h3>
+    <div>Test Element: <test-element></test-element></div> <!-- custom elements can exist outside of the "app" -->
+    <div>Ajax Counter: <ajax-counter clicks-label="Remotely Operated Cliques"></ajax-counter></div>
+    <script src="/static/js/test-component.js"></script> <!-- components need to be loaded after body -->
+</body>
+</html>
